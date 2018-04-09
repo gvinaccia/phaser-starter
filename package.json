@@ -1,0 +1,32 @@
+{
+  "name": "phaser-starter",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --content-base src --open",
+    "lint": "tslint -e 'src/phaser.d.ts' 'src/**/*.ts'",
+    "build": "NODE_ENV=production webpack -p",
+    "test": "karma start --single-run",
+    "test:watch": "karma start",
+    "typings:update": "scripts/update_p3_types.sh"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.54",
+    "html-webpack-plugin": "^2.30.1",
+    "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-typescript-preprocessor2": "^1.2.1",
+    "karma-webpack": "^2.0.4",
+    "phantomjs-prebuilt": "^2.1.15",
+    "phaser": "^3.3.0",
+    "promise-polyfill": "^6.0.2",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^2.3.4",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
