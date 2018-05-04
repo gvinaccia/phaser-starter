@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -50,6 +51,9 @@ module.exports = {
       title: 'TS Template App',
       template: './src/index.ejs',
       chunks: ['vendor', 'main']
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: "src/assets/", to: "assets/" }
+    ])
   ]
 }
