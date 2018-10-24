@@ -5,7 +5,7 @@ export class App {
 
   private game: Phaser.Game|null = null;
 
-  public run(parentElement: HTMLElement|null) {
+  public run(parentElement: HTMLElement|string) {
 
     this.game = new Game({
       parent: parentElement,
